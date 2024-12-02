@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Survey</title>
+
+    <!-- Link to Template Stylesheets -->
+    <link rel="stylesheet" href="itwp1000/assets/css/fontawesome-all.min.css" /> <!-- FontAwesome -->
+    <link rel="stylesheet" href="itwp1000/assets/css/main.css" /> <!-- Main template CSS -->
+
+    <style>
+        /*
+            Solid State by HTML5 UP
+            html5up.net | @ajlkn
+            Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+        */
+
+        /* Banner */
+        body.is-preload #banner .logo {
+            -moz-transform: none;
+            -webkit-transform: none;
+            -ms-transform: none;
+            transform: none;
+            opacity: 1;
+        }
+
+        body.is-preload #banner h2 {
+            opacity: 1;
+            -moz-transform: none;
+            -webkit-transform: none;
+            -ms-transform: none;
+            transform: none;
+            -moz-filter: none;
+            -webkit-filter: none;
+            -ms-filter: none;
+            filter: none;
+        }
+
+        body.is-preload #banner p {
+            opacity: 1;
+            -moz-transform: none;
+            -webkit-transform: none;
+            -ms-transform: none;
+            transform: none;
+            -moz-filter: none;
+            -webkit-filter: none;
+            -ms-filter: none;
+            filter: none;
+        }
+
+        /* Additional Form Layout Styles */
+        form {
+            margin: 20px auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            max-width: 800px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            width: auto;
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 25px;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #333;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+    </style>
+</head>
+<body class="is-preload">
+
+    <!-- Header Section (Template Header) -->
+    <header id="banner">
+        <div class="logo">
+            <h1>Music Survey</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Survey Form -->
+        <form id="survey" name="survey" method="post" action="https://webdevbasics.net/scripts/demo.php" enctype="application/x-www-form-urlencoded">
+            
+            <!-- Step 1 -->
+            <section>
+                <fieldset>
+                    <legend><strong>Step 1: Your Information</strong></legend>
+                    <label>Name: <input type="text" name="name" id="name" size="30" placeholder="Full Name" required autofocus></label>
+                    <label>Email: <input type="email" name="email" id="email" size="30" placeholder="Email Address" required></label>
+                    <label>Phone Number: <input type="tel" name="phone" id="phone" size="30" placeholder="Phone Number" required></label>
+                    <p>Please select your gender:</p>
+                    <label>Male <input type="radio" name="gender" value="male"></label>
+                    <label>Female <input type="radio" name="gender" value="female"></label>
+                    <label>Prefer not to answer <input type="radio" name="gender" value="no_answer"></label>
+                    <label>Age: <input type="range" min="5" max="100" value="5" name="age" id="myRange"></label>
+                    <span id="demo"></span> Years Old
+                </fieldset>
+            </section>
+
+            <!-- Step 2 -->
+            <section>
+                <fieldset>
+                    <legend><strong>Step 2: Favorite Genre(s)</strong></legend>
+                    <label>Pop: <input type="checkbox" name="pop" id="pop" value="yes"></label>
+                    <label>Rock: <input type="checkbox" name="rock" id="rock" value="yes"></label>
+                    <label>Rap: <input type="checkbox" name="rap" id="rap" value="yes"></label>
+                    <label>Classical: <input type="checkbox" name="classical" id="classical" value="yes"></label>
+                    <label>Folk: <input type="checkbox" name="folk" id="folk" value="yes"></label>
+                    <label>Country: <input type="checkbox" name="country" id="country" value="yes"></label>
+                    <label>Other: <input type="checkbox" name="other" id="other" value="yes"></label>
+                </fieldset>
+            </section>
+
+            <!-- Step 3 -->
+            <section>
+                <fieldset>
+                    <legend><strong>Step 3: Purchase Options</strong></legend>
+                    <label>I mainly purchase music through:
+                        <select name="purchase_options" id="purchase_options">
+                            <option selected="selected" disabled>Please Select One ...</option>
+                            <option value="itunes">iTunes</option>
+                            <option value="p2p">Peer2Peer Sites</option>
+                            <option value="paid_sites">Paid Subscription Sites</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </label>
+                </fieldset>
+            </section>
+
+            <!-- Step 4 -->
+            <section>
+                <fieldset>
+                    <legend><strong>Step 4: Share Your Thoughts</strong></legend>
+                    <label>How has music influenced your life?<br>
+                        <textarea name="Comments" id="UserComments" class="textinput" onFocus="javascript: this.value='';">Place your comments here</textarea>
+                    </label>
+                </fieldset>
+            </section>
+
+            <!-- Step 5 -->
+            <section>
+                <fieldset>
+                    <legend><strong>Step 5: Send It!</strong></legend>
+                    <input id="submit" type="submit" value="Complete Survey">
+                    <input id="reset" type="reset" value="Reset">
+                </fieldset>
+            </section>
+        </form>
+
+    </main>
+
+    <!-- Footer Section (Template Footer) -->
+    <footer>
+        <p id="validation">
+            <a href="https://validator.w3.org/" target="_blank">HTML5 Validation</a> |
+            <a href="file:///C:/Users/jwdad/Desktop/dadswellj023/itwp1000/home.htm" target="_blank">Course Homepage</a>
+        </p>
+    </footer>
+
+    <!-- Link to JavaScript files (if template uses them) -->
+    <script src="itwp1000/assets/js/jquery.min.js"></script>
+    <script src="itwp1000/assets/js/main.js"></script>
+
+    <script>
+        // Slider script for age input
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function() {
+            output.innerHTML = this.value;
+        }
+    </script>
+
+</body>
+</html>
