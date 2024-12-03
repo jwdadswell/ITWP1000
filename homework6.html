@@ -90,6 +90,19 @@
             resize: vertical;
             height: 100px;
         }
+
+        /* Style for checkboxes */
+        input[type="checkbox"] {
+            margin-right: 10px; /* Adds space between checkbox and label */
+            width: 20px; /* Adjusts the size of the checkbox */
+            height: 20px;
+        }
+
+        label {
+            font-size: 16px; /* Increases font size for readability */
+            display: block; /* Makes sure labels are displayed on their own line */
+            margin-bottom: 10px; /* Adds spacing between labels */
+        }
     </style>
 </head>
 <body class="is-preload">
@@ -127,12 +140,12 @@
             <section>
                 <fieldset>
                     <legend><strong>Step 2: Favorite Genre(s)</strong></legend>
-                    <label>Pop: <input type="checkbox" name="pop" id="pop" value="yes"></label>
-                    <label>Rock: <input type="checkbox" name="rock" id="rock" value="yes"></label>
-                    <label>Rap: <input type="checkbox" name="rap" id="rap" value="yes"></label>
-                    <label>Classical: <input type="checkbox" name="classical" id="classical" value="yes"></label>
-                    <label>Folk: <input type="checkbox" name="folk" id="folk" value="yes"></label>
-                    <label>Country: <input type="checkbox" name="country" id="country" value="yes"></label>
+                    <label>Pop: <input type="checkbox" name="pop" id="pop" value="yes"></label><br>
+                    <label>Rock: <input type="checkbox" name="rock" id="rock" value="yes"></label><br>
+                    <label>Rap: <input type="checkbox" name="rap" id="rap" value="yes"></label><br>
+                    <label>Classical: <input type="checkbox" name="classical" id="classical" value="yes"></label><br>
+                    <label>Folk: <input type="checkbox" name="folk" id="folk" value="yes"></label><br>
+                    <label>Country: <input type="checkbox" name="country" id="country" value="yes"></label><br>
                     <label>Other: <input type="checkbox" name="other" id="other" value="yes"></label>
                 </fieldset>
             </section>
